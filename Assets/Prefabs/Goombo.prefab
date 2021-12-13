@@ -49,10 +49,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd26e4a84c3475c4397ef563054e36ac, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -797953837
+  m_SortingLayerID: 284449123
   m_SortingLayer: -3
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 6d7ff96198d9cac46bcbf230df5b0e93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b214507b24d38d45bb21beba212edd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1172736128774433017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c04f93306e61c14fba21b9884393b29, type: 3}
+  m_Script: {fileID: 11500000, guid: ff54cdf8bc4bb78458e29a8224ceed14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
