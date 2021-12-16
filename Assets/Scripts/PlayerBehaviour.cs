@@ -78,7 +78,7 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioClip clipLand;
     public AudioClip clipSweep;
     public AudioClip clipJump;
-    public AudioClip clipPumpkin;
+    public AudioClip clipKey;
 
     private List<Transformation> transformations;
     public bool isAnim;
@@ -318,9 +318,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Pumpkin"))
+        if (collision.CompareTag("Key"))
         {
-            StartCoroutine(PickPumpkin(collision.gameObject));
+            StartCoroutine(PickKey(collision.gameObject));
         }
         if (collision.CompareTag("QTE"))
         {
@@ -400,17 +400,17 @@ public class PlayerBehaviour : MonoBehaviour
         sprend.enabled = true;
         bcollid.enabled = true;
         rb2d.gravityScale = 32;
-        transform.position = new Vector3(-23.75f, -1.59f, 0);
+        transform.position = new Vector3(-24f, -1f, 0);
         transform.rotation = Quaternion.identity;
         isAnim = false;
     }
 
-    IEnumerator PickPumpkin(GameObject pumpkin)
+    IEnumerator PickKey(GameObject key)
     {
         yield return new WaitForSeconds(1);
-        GlobalScript.pumpkinOwned = true;
-        Destroy(pumpkin);
-        audiosrc.PlayOneShot(clipPumpkin);
+        GlobalScript.keyOwned = true;
+        Destroy(key);
+        audiosrc.PlayOneShot(clipKey);
     }
 
     IEnumerator DoAnim(int idAnim)

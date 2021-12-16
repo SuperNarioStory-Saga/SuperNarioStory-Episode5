@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class GlobalScript
 {
-    public static bool pumpkinOwned;
+    public static bool keyOwned;
     public static int choice;
 }
