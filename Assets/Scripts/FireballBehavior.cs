@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FireballBehavior : MonoBehaviour
 {
-    public float lowerLimit = -3.65f;
+    public float? lowerLimit = -3.65f;
+    public float? upperLimit = null;
+    public float? xlimit = -10f;
 
     private Rigidbody2D rb2d;
     private bool hitGround = false;
@@ -20,7 +22,7 @@ public class FireballBehavior : MonoBehaviour
         if (!hitGround)
         {
             transform.position += transform.right * Time.deltaTime * 8.5f;
-            if (transform.position.y < lowerLimit)
+            if ((upperLimit != null && transform.position.y > upperLimit) || (lowerLimit != null && transform.position.y < lowerLimit) || (xlimit != null && transform.position.x < xlimit))
             {
                 hitGround = true;
                 StartCoroutine(Shrink());

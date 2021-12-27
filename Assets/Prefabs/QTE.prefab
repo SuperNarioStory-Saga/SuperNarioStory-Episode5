@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5219303822380559073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.51, y: -3.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.839, y: 0.839, z: 0.839}
   m_Children:
   - {fileID: 5219303822604467820}
@@ -66,6 +66,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -90,8 +91,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 858a1fe4c3f844e4c80d5d4c4f8066b2, type: 3}
-  m_Color: {r: 0.5755002, g: 0.17621931, b: 0.6792453, a: 0}
+  m_Sprite: {fileID: -2413806693520163455, guid: 34863463a1c2b2844aa0fbe31030a919, type: 3}
+  m_Color: {r: 0.764151, g: 0.0036044943, b: 0.03736023, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5219303822380559073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd2f839aa6482646b0bdbeee93ebc33, type: 3}
+  m_Script: {fileID: 11500000, guid: 706368d88b7e32840984fa3298810c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &5219303822380559102
@@ -181,6 +182,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -205,6 +207,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &5219303822604467821
 TextMesh:
   serializedVersion: 3
