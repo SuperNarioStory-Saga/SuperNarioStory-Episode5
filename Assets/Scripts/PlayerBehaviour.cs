@@ -147,63 +147,66 @@ public class PlayerBehaviour : MonoBehaviour
         qte4.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte4);
         //qte 5
-        Transformation qte5 = new Transformation(new Vector3(-10.88f, 1f, -1), Vector3.zero);
-        qte5.Add(new Vector3(-9.14f, 1.76f, -1), new Vector3(0, 0, 800f));
-        qte5.Add(new Vector3(-8.21f, -0.26f, -1), new Vector3(0, 0, -800f));
-        qte5.Add(new Vector3(-8.21f, -0.26f, -1), Vector3.zero, 200, true);
+        Transformation qte5 = new Transformation(new Vector3(-6.12f, -0.82f, -1), Vector3.zero);
+        qte5.Add(new Vector3(-4.88f, 0.41f, -1), Vector3.zero);
+        qte5.Add(new Vector3(-3.58f, -0.85f, -1), Vector3.zero);
         qte5.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte5);
         //qte 6
-        Transformation qte6 = new Transformation(new Vector3(-3.22f, -0.94f, -1), Vector3.zero);
-        qte6.Add(new Vector3(-3.38f, 3.67f, -1), Vector3.zero);
+        Transformation qte6 = new Transformation(new Vector3(-3.58f, -0.85f, -1), Vector3.zero);
+        qte6.Add(new Vector3(-3.61f, 3.46f, -1), Vector3.zero);
+        qte6.Add(new Vector3(1.05f, 3.46f, -1), new Vector3(0, 0, -800f));
         qte6.AddClipToLast(Transformation.Clips.Sweep);
-        qte6.Add(new Vector3(-22.38f, 3.74f, -1), new Vector3(0, 0, -800f));
-        qte6.AddClipToLast(Transformation.Clips.Sweep);
-        qte6.Add(new Vector3(-22.38f, 3.74f, -1), Vector3.zero, 200, true);
+        qte6.Add(new Vector3(1.05f, 3.46f, -1), new Vector3(0, 0, -180f), 200, true);
+        qte6.Add(new Vector3(1.12f, -0.87f, -1), Vector3.zero);
+        qte6.Add(new Vector3(1.12f, -0.87f, -1), Vector3.zero, 200, true);
+        qte6.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte6);
         //qte 7
-        Transformation qte7 = new Transformation(new Vector3(-6.05f, -2.41f, -1), Vector3.zero);
-        qte7.Add(new Vector3(-3.26f, 3.21f, -1), Vector3.zero);
-        qte7.Add(new Vector3(-0.93f, 3.98f, -1), Vector3.zero);
+        Transformation qte7 = new Transformation(new Vector3(-0.8f, -0.02f, -1), Vector3.zero);
+        qte7.Add(new Vector3(-0.78f, 2.42f, -1), Vector3.zero);
+        qte7.Add(new Vector3(1.06f, 1.85f, -1), Vector3.zero);
+        qte7.Add(new Vector3(1.12f, -0.87f, -1), Vector3.zero);
+        qte7.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte7);
         //qte 8
-        Transformation qte8 = new Transformation(new Vector3(-3.86f, -3.16f, -1), Vector3.zero);
-        qte8.Add(new Vector3(-4.8f, -3.1f, -1), Vector3.zero);
-        qte8.Add(new Vector3(-4.8f, -3.1f, -1), new Vector3(0, 0, -87), 50, true);
-        qte8.AddClipToLast(Transformation.Clips.Sweep);
-        qte8.Add(new Vector3(1.67f, -3.1f, -1), Vector3.zero);
-        qte8.Add(new Vector3(1.67f, -3.6f, -1), Vector3.zero, 50, true);
+        Transformation qte8 = new Transformation(new Vector3(1.12f, -0.88f, -1), Vector3.zero);
+        qte8.Add(new Vector3(2.03f, 1.61f, -1), Vector3.zero);
+        qte8.Add(new Vector3(3.59f, 0.96f, -1), Vector3.zero);
+        qte8.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte8);
         //qte 9
-        Transformation qte9 = new Transformation(new Vector3(2.11f, -3.16f, -1), Vector3.zero);
-        qte9.Add(new Vector3(2.55f, -0.74f, -1), Vector3.zero);
-        qte9.Add(new Vector3(4.2f, -1.22f, -1), Vector3.zero);
-        qte9.Add(new Vector3(4.64f, -3.1f, -1), Vector3.zero);
+        Transformation qte9 = new Transformation(new Vector3(3.59f, 0.96f, -1), Vector3.zero);
+        qte9.Add(new Vector3(4.56f, 3.82f, -1), Vector3.zero);
+        qte9.Add(new Vector3(5.56f, 1.83f, -1), Vector3.zero);
         qte9.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte9);
         //qte 10
-        Transformation qte10 = new Transformation(new Vector3(-0.88f, 3f, -1), Vector3.zero);
-        qte10.Add(new Vector3(1.45f, 0.94f, -1), new Vector3(0, 0, 800f));
-        qte10.AddClipToLast(Transformation.Clips.Sweep);
-        qte10.Add(new Vector3(-1.28f, -0.68f, -1), new Vector3(0, 0, -800f));
-        qte10.AddClipToLast(Transformation.Clips.Sweep);
-        qte10.Add(new Vector3(-2.24f, 2.09f, -1), new Vector3(0, 0, 800f));
-        qte10.AddClipToLast(Transformation.Clips.Sweep);
-        qte10.Add(new Vector3(-2.24f, 2.09f, -1), new Vector3(0, 0, -800f));
-        qte10.AddClipToLast(Transformation.Clips.Sweep);
-        qte10.Add(new Vector3(-0.51f, -0.68f, -1), Vector3.zero, 200, true);
+        Transformation qte10 = new Transformation(new Vector3(5.56f, 1.83f, -1), Vector3.zero);
+        qte10.Add(new Vector3(6.53f, 3.4f, -1), Vector3.zero);
+        qte10.Add(new Vector3(7.4f, 2.9f, -1), Vector3.zero);
         qte10.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte10);
         //qte 11
-        Transformation qte11 = new Transformation(new Vector3(6.28f, -3.13f, -1), Vector3.zero);
-        qte11.Add(new Vector3(6.73f, -2.06f, -1), Vector3.zero);
-        qte11.Add(new Vector3(7.42f, -2.5f, -1), Vector3.zero);
+        Transformation qte11 = new Transformation(new Vector3(4.64f, -2.28f, -1), Vector3.zero);
+        qte11.Add(new Vector3(4.64f, 3.52f, -1), Vector3.zero);
+        qte11.Add(new Vector3(4.64f, 3.52f, -1), new Vector3(0, 0, 90f), 9, true);
+        qte11.Add(new Vector3(-0.79f, 3.52f, -1), Vector3.zero);
+        qte11.Add(new Vector3(-0.79f, 3.52f, -1), Vector3.zero, 9, true);
+        qte11.Add(new Vector3(-0.79f, 0f, -1), Vector3.zero);
         qte11.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte11);
         //qte 12
-        Transformation qte12 = new Transformation(new Vector3(11.6f, -2.52f, -1), Vector3.zero);
-        qte12.Add(new Vector3(11.84f, -0.54f, -1), Vector3.zero, 15);
-        qte12.Add(new Vector3(12.9f, -1.14f, -1), Vector3.zero, 15);
+        Transformation qte12 = new Transformation(new Vector3(10.06f, -0.3f, -1), Vector3.zero);
+        qte12.Add(new Vector3(8.17f, 2.19f, -1), Vector3.zero);
+        qte12.Add(new Vector3(8.17f, 2.19f, -1), new Vector3(0, 0, -35f), 20, true);
+        qte12.AddClipToLast(Transformation.Clips.Jump);
+        qte12.Add(new Vector3(10.69f, 4.05f, -1), Vector3.zero);
+        qte12.Add(new Vector3(10.69f, 4.05f, -1), new Vector3(0, 0, -154f), 20, true);
+        qte12.AddClipToLast(Transformation.Clips.Sweep);
+        qte12.Add(new Vector3(12.92f, -1.92f, -1), Vector3.zero, 15);
+        qte12.Add(new Vector3(12.92f, -1.92f, -1), Vector3.zero, 200, true);
+        qte12.Add(new Vector3(12.92f, -2.78f, -1), Vector3.zero);
         qte12.AddClipToLast(Transformation.Clips.Land);
         transformations.Add(qte12);
         //qte 13
