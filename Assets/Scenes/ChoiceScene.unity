@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choice1: {fileID: 32900000, guid: 3800af494e2325c48906c83a04eaae7a, type: 3}
   choice2: {fileID: 32900000, guid: 2476a05b345afa845b33f2e2aadbfb86, type: 3}
-  choice3: {fileID: 0}
+  choice3: {fileID: 32900000, guid: 1026c3951fd181a4baf26935c32e7673, type: 3}
   special: {fileID: 491921545}
 --- !u!212 &1317771369
 SpriteRenderer:

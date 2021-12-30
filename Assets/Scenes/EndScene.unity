@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   end1: {fileID: 21300000, guid: db73ce6ffa2d5214f9581120ff062f50, type: 3}
   end2: {fileID: 21300000, guid: b675799b82c05824dbec27c1201f77af, type: 3}
-  end3: {fileID: 0}
+  end3: {fileID: 21300000, guid: f533241cdfe3af648b7ef381780f381f, type: 3}
   keySprite: {fileID: 21300000, guid: 8efebc798095afd44ab9b1222019384c, type: 3}
   endWrapper: {fileID: 427047964}
   keyWrapper: {fileID: 1670979994}
@@ -919,8 +919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Merci d'avoir jou\xE9 toutes ces ann\xE9es, cette fois-ci c'est vraiment
-    fini..."
+  m_Text: Tu as fini Super Nario Story !
 --- !u!222 &1467477336
 CanvasRenderer:
   m_ObjectHideFlags: 0

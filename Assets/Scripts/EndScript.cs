@@ -41,7 +41,7 @@ public class EndScript : MonoBehaviour
                 endRend.sprite = end2;
                 break;
             case 3:
-                endText.text = "Bienvenue dans le Nario Cinematic Universe";
+                endText.text = "Tu as rencontré le professeur";
                 endRend.sprite = end3;
                 break;
         }
