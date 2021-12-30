@@ -285,7 +285,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 sprend.flipX = movement.x >= 0;
             }
-            Debug.Log(canMove);
+            //Debug.Log(canMove);
             if (canMove && Input.GetKeyDown(currentQTELetter)) {
                 StartCoroutine(DoAnim(currentQTEId));
             }
@@ -305,11 +305,11 @@ public class PlayerBehaviour : MonoBehaviour
             Regex rx = new Regex(@"^\w*\s\((\d+)\)");
             Match m = rx.Match(collision.gameObject.name);
             currentQTEId = int.Parse(m.Groups[1].Captures[0].Value);
-            Debug.Log(currentQTELetter +" "+ currentQTEId);
+            //Debug.Log(currentQTELetter +" "+ currentQTEId);
         }
         if (collision.CompareTag("Finish"))
         {
-            SceneManager.LoadScene("ChoiceScreen");
+            SceneManager.LoadScene("BossScene");
         }
     }
 
@@ -396,10 +396,10 @@ public class PlayerBehaviour : MonoBehaviour
         rb2d.gravityScale = 0;
         animControl.SetBool("isWalking", false);
         int animState = 0;
-        Debug.Log("Launch anim " + idAnim + ", contains " + transformations[idAnim].positions.Count + " steps");
+        //Debug.Log("Launch anim " + idAnim + ", contains " + transformations[idAnim].positions.Count + " steps");
         while (animState < transformations[idAnim].positions.Count)
         {
-            Debug.Log("Step " + animState);
+            //Debug.Log("Step " + animState);
             //Sound effect
             switch(transformations[idAnim].clips[animState])
             {
@@ -430,7 +430,7 @@ public class PlayerBehaviour : MonoBehaviour
                 do
                 {
                     //Debug.Log("Anim iter pos");
-                    transform.position = Vector3.MoveTowards(transform.position, transformations[idAnim].positions[animState], transformations[idAnim].speeds[animState] * 1.3f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, transformations[idAnim].positions[animState], transformations[idAnim].speeds[animState] * 2f * Time.deltaTime);
                     if(transformations[idAnim].rotations[animState].z != 0)
                     {
                         transform.Rotate(new Vector3(0, 0, transform.rotation.eulerAngles.z + transformations[idAnim].rotations[animState].z));

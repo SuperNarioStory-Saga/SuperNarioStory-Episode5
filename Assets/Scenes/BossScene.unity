@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111471473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9, y: -2.18, z: 0}
+  m_LocalPosition: {x: 6.9, y: -2.09, z: 0}
   m_LocalScale: {x: 6.4383, y: 6.4383, z: 6.4383}
   m_Children: []
   m_Father: {fileID: 0}
@@ -272,6 +272,10 @@ MonoBehaviour:
   attackSprite: {fileID: -8900527426865694753, guid: 1bfeaaed896d20a468198090c938fd61, type: 3}
   fireball: {fileID: 763702144279154735, guid: 8ec2c56e3f548324f9f0dcbe4bacd620, type: 3}
   fireballClip: {fileID: 8300000, guid: c05587e20ce25c847ab5fa0e5cb14dd3, type: 3}
+  victoryClip: {fileID: 8300000, guid: 051b7c2071027fb499e28ac57682a63b, type: 3}
+  qte1: {fileID: 1166957255}
+  qte2: {fileID: 244860641}
+  qte3: {fileID: 1251215602}
 --- !u!82 &111471479
 AudioSource:
   m_ObjectHideFlags: 0
@@ -378,6 +382,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5219303822380559101, guid: 0d9f1692567b58b4a906cee879bff449, type: 3}
   m_PrefabInstance: {fileID: 1814536798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244860641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5219303822380559073, guid: 0d9f1692567b58b4a906cee879bff449, type: 3}
+  m_PrefabInstance: {fileID: 1814536798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &399296629
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a1dc71d11440f4db841fc1217d2b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 10
   clipDeath: {fileID: 8300000, guid: 2c666992d917ebc409777a381cc75254, type: 3}
   clipHit: {fileID: 8300000, guid: 2e3053cd354f25f46943588e6ed06b70, type: 3}
   clipLand: {fileID: 8300000, guid: fad2b21f9b10745498b7a42024808a5a, type: 3}
@@ -476,9 +485,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 92b10cb41a65b1041975034ea8e292be, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.54
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -572,9 +581,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 92b10cb41a65b1041975034ea8e292be, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.158
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -738,7 +747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399296629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.35, y: -3.2, z: 0}
+  m_LocalPosition: {x: -7.74, y: -3.29, z: 0}
   m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -956,6 +965,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1166957255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5219303822380559073, guid: 0d9f1692567b58b4a906cee879bff449, type: 3}
+  m_PrefabInstance: {fileID: 1403064291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1251215602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5219303822380559073, guid: 0d9f1692567b58b4a906cee879bff449, type: 3}
+  m_PrefabInstance: {fileID: 1941287369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403064291
 PrefabInstance:
   m_ObjectHideFlags: 0

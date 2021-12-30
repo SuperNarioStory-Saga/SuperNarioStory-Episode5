@@ -109,26 +109,29 @@ public class PlayerBossBehaviour : MonoBehaviour
 
         /*QTEs*/
         //qte 0
-        Transformation qte0 = new Transformation(new Vector3(-20.69f, -3.1f, -1), Vector3.zero);
+        Transformation qte0 = new Transformation(new Vector3(-3.22f, -3.32f, -1), Vector3.zero);
+        qte0.Add(new Vector3(-2.05f, 0.9f, -1f), Vector3.zero);
+        qte0.Add(new Vector3(0f, 3f, -1f), Vector3.zero);
         transformations.Add(qte0);
         //qte 1
-        Transformation qte1 = new Transformation(new Vector3(-18.11f, -1.58f, -1), Vector3.zero);
+        Transformation qte1 = new Transformation(new Vector3(0f, 0.32f, -1), Vector3.zero);
+        qte1.Add(new Vector3(1.87f, 3.23f, -1f), Vector3.zero);
+        qte1.Add(new Vector3(4.64f, 4.32f, -1f), Vector3.zero);
         transformations.Add(qte1);
         //qte 2
-        Transformation qte2 = new Transformation(new Vector3(-15.84f, -0.6f, -1), Vector3.zero);
+        Transformation qte2 = new Transformation(new Vector3(4.6f, 2.86f, -1), Vector3.zero);
+        qte2.Add(new Vector3(5.63f, 0.25f, - 1f), new Vector3(0, 0, 500f));
+        qte2.Add(new Vector3(5.63f, 0.25f, -1f), Vector3.zero, 200, true);
+        qte2.Add(new Vector3(-8.05f, -3.3f, -1f), Vector3.zero, 20);
         transformations.Add(qte2);
     }
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
-    }
-
-    void FixedUpdate()
-    {
         //Controle par le joueur
         if (!isAnim)
         {
@@ -140,6 +143,7 @@ public class PlayerBossBehaviour : MonoBehaviour
             {
                 sprend.flipX = movement.x >= 0;
             }
+            //Debug.Log(canMove);
             if (canMove && Input.GetKeyDown(currentQTELetter))
             {
                 StartCoroutine(DoAnim(currentQTEId));
@@ -156,7 +160,7 @@ public class PlayerBossBehaviour : MonoBehaviour
             Regex rx = new Regex(@"^\w*\s\((\d+)\)");
             Match m = rx.Match(collision.gameObject.name);
             currentQTEId = int.Parse(m.Groups[1].Captures[0].Value);
-            Debug.Log(currentQTELetter + " " + currentQTEId);
+            //Debug.Log(currentQTELetter + " " + currentQTEId);
         }
     }
 
@@ -193,8 +197,14 @@ public class PlayerBossBehaviour : MonoBehaviour
             }
             else
             {
-                Destroy(collision.gameObject);
-                audiosrc.PlayOneShot(clipHit);
+                if (collision.gameObject.name == "Bowsy")
+                {
+                    audiosrc.PlayOneShot(clipHit);
+                } else
+                {
+                    Destroy(collision.gameObject);
+                    audiosrc.PlayOneShot(clipHit);
+                }
             }
         }
     }
@@ -212,12 +222,12 @@ public class PlayerBossBehaviour : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         audiosrc.PlayOneShot(clipDeath);
-        while (audioThemesrc.volume < 1)
+        while (audioThemesrc.volume < 0.5f)
         {
             audioThemesrc.volume += 0.05f;
             yield return new WaitForSeconds(0.04f);
         }
-        audioThemesrc.volume = 1;
+        audioThemesrc.volume = 0.5f;
         yield return new WaitForSeconds(0.04f);
 
         sprend.enabled = true;
@@ -235,10 +245,10 @@ public class PlayerBossBehaviour : MonoBehaviour
         rb2d.gravityScale = 0;
         animControl.SetBool("isWalking", false);
         int animState = 0;
-        Debug.Log("Launch anim " + idAnim + ", contains " + transformations[idAnim].positions.Count + " steps");
+        //Debug.Log("Launch anim " + idAnim + ", contains " + transformations[idAnim].positions.Count + " steps");
         while (animState < transformations[idAnim].positions.Count)
         {
-            Debug.Log("Step " + animState);
+            //Debug.Log("Step " + animState);
             //Sound effect
             switch (transformations[idAnim].clips[animState])
             {
@@ -269,7 +279,7 @@ public class PlayerBossBehaviour : MonoBehaviour
                 do
                 {
                     //Debug.Log("Anim iter pos");
-                    transform.position = Vector3.MoveTowards(transform.position, transformations[idAnim].positions[animState], transformations[idAnim].speeds[animState] * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, transformations[idAnim].positions[animState], transformations[idAnim].speeds[animState] * 2f * Time.deltaTime);
                     if (transformations[idAnim].rotations[animState].z != 0)
                     {
                         transform.Rotate(new Vector3(0, 0, transform.rotation.eulerAngles.z + transformations[idAnim].rotations[animState].z));

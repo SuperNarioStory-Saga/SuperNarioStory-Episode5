@@ -69,6 +69,6 @@ public class StartScript : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
         }
-        SceneManager.LoadScene("MainLevel");
+        SceneManager.LoadScene("PlatformLevel");
     }
 }
